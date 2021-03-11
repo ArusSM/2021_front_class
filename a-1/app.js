@@ -1,8 +1,9 @@
-window.onload = function() {
+wwindow.onload = function() {
 
     $("nav > ul > ul").hide();
     $("nav > ul").mouseenter(function(e){
 
+	    
         const p = $(e.currentTarget).find("p");
         p.addClass("active");
         $("nav > ul > ul").stop().slideDown(200);
