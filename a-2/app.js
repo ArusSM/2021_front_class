@@ -2,14 +2,16 @@ window.onload = function(){
     $(".pop").hide();
     $(".backColor").hide();
     $("nav > ul > li > ul > li").hide();
-    $("nav > ul").hover(
+    $("nav > ul > li").hover(
         function(e){
-            $("nav > ul > li > ul > li").stop().slideDown(200);
-            $(".backColor").stop().slideDown(200);
+            // $("nav > ul > li > ul > li").stop().slideDown(200); // 다 보이게 하기
+            $(e.currentTarget).find("li").stop().slideDown(200); // 한줄씩 보이게 하기
+            // $(".backColor").stop().slideDown(200); // 뒷배경
         },
         function(e){
-            $("nav > ul > li > ul > li").stop().slideUp(200);
-            $(".backColor").stop().slideUp(200);
+            // $("nav > ul > li > ul > li").stop().slideUp(200); // 다 보이게 하기
+            $(e.currentTarget).find("li").stop().slideUp(200); // 한줄씩 보이게 하기
+            // $(".backColor").stop().slideUp(200); // 뒷배경
         }
     );
     $("nav > ul > li").hover(
